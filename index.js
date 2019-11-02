@@ -50,7 +50,7 @@ function processFirstItem(stringList, callback) {
 */
 function processLength(list, callback) {
   /* CODE HERE */
-  
+  return callback(list += 1000);
 }
 
 /**
@@ -88,8 +88,14 @@ function processLastItem(/* CODE HERE */) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
+function processSum(numberList, callback) {
   /* CODE HERE */
+  callback(numberList)
+}
+
+function numberList (num) {
+  num.
+  return `${num} + "is a bug number!"`
 }
 
 /**
@@ -179,8 +185,9 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
+function getFullNames(runners) {
   /* CODE HERE */
+  // runners.forEach(function(names){return `${names.last_name} ${names.first_name}`})
 }
 
 /**
