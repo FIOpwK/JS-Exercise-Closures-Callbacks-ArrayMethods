@@ -92,11 +92,6 @@ function processLastItem(stringList, callback) {
 */
 function processSum(numberList, callback) {
   /* CODE HERE */
-//   for (let i=0; i<numberList.length; i++) {var sum = numberList[i] + [i]}
-//  return callback(numberList.reduce(sum))
-// for (let i=0;i<numberList.length;i++){var sum = numberList[i] + numberList[i]}
-// return callback(numberList.reduce(sum))
-// return callback(numberList[2] += numberList)
 const sum = (num1, num2) => {return num1 + num2}
 return callback(numberList.reduce(sum, 0))
 }
@@ -171,7 +166,9 @@ function processContains(item, list, callback) {
 */
 function processDuplicateFree(list, callback) {
   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
-  return callback(list.filter())
+  // return callback(list.filter())
+  const dupefree = [... new Set(list)]
+  return callback(dupefree)
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
@@ -194,8 +191,9 @@ function processDuplicateFree(list, callback) {
 */
 function getFullNames(runners) {
   /* CODE HERE */
-  // runners.forEach(function(names){return `${names.last_name} ${names.first_name}`})
-  // runners.forEach( function(names) {`${names.last_name} ${names.first_name}`})
+// const fullname = [];
+// runners.forEach(function(runners){fullname.push(`${runners.first_name} ${runners.last_name}`)}) 
+// return fullname;
 }
 
 /**
@@ -212,7 +210,7 @@ function getFullNames(runners) {
 */
 function firstNamesAllCaps(runners) {
   /* CODE HERE */
-  return `${runners.first_name}`
+ 
 }
 
 /**
@@ -242,8 +240,10 @@ function getRunnersByTShirtSize(/* CODE HERE */) {
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns a number which is the sum of the donations by all runners.
 */
-function tallyUpDonations(/* CODE HERE */) {
+function tallyUpDonations(runners) {
   /* CODE HERE */
+  const sum = (donation, amount) => {return donation + amount }
+  return runners.reduce(sum, 0)
 }
 
 /////////////// CLOSURES ///////////////
