@@ -166,9 +166,13 @@ function processContains(item, list, callback) {
 */
 function processDuplicateFree(list, callback) {
   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
-  // return callback(list.filter())
-  const dupefree = [... new Set(list)]
-  return callback(dupefree)
+  // using Set constructor and spread syntax
+  
+  // const dupefree = [... new Set(list)]
+  // return callback(dupefree)
+
+  // using filter
+  return list.filter(function(item, index){return list.indexOf(item) == index;})
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
