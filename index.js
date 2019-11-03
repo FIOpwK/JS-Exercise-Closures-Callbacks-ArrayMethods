@@ -168,11 +168,11 @@ function processDuplicateFree(list, callback) {
   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
   // using Set constructor and spread syntax
   
-  // const dupefree = [... new Set(list)]
-  // return callback(dupefree)
+  const dupefree = [... new Set(list)]
+  return callback(dupefree)
 
   // using filter
-  return list.filter(function(item, index){return list.indexOf(item) == index;})
+  // return list.++filter(function(item, current){return list.indexOf(item) == current;})
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
@@ -246,7 +246,7 @@ function getRunnersByTShirtSize(/* CODE HERE */) {
 */
 function tallyUpDonations(runners) {
   /* CODE HERE */
-  const sum = (donation, amount) => {return donation + amount }
+  const sum = (donation, amount) => {return donation + amount[donation]}
   return runners.reduce(sum, 0)
 }
 
@@ -270,7 +270,7 @@ function counterMaker() {
   // BROKEN CODE STARTS
   const count = 0;
   function counter() {
-      ++count
+      // ++count
   }
   // BROKEN CODE ENDS
 }
@@ -295,8 +295,11 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
+function counterMakerWithLimit(maxValue) {
   /* CODE HERE */
+  // for (let i = 0; i < maxValue; i++) {
+  //   return maxValue[i]
+  // }
 }
 
 /////////////// END OF CHALLENGE ///////////////
