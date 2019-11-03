@@ -96,12 +96,12 @@ function processSum(numberList, callback) {
 //  return callback(numberList.reduce(sum))
 // for (let i=0;i<numberList.length;i++){var sum = numberList[i] + numberList[i]}
 // return callback(numberList.reduce(sum))
-// return callback(numberList + numberList[numberList.length - 1])
+// return callback(numberList[2] += numberList)
 }
 
 
 /**
- * ### Challenge `processProduct`
+ * ### Challenge `processProduct
  * 
  * @instructions
  * Implement a higher-order function called `processProduct`.
@@ -143,8 +143,9 @@ function processProduct(num1, num2, callback) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
+function processContains(item, list, callback) {
   /* CODE HERE */
+  return callback(list.includes(item))
 }
 
 /**
