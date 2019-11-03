@@ -97,6 +97,8 @@ function processSum(numberList, callback) {
 // for (let i=0;i<numberList.length;i++){var sum = numberList[i] + numberList[i]}
 // return callback(numberList.reduce(sum))
 // return callback(numberList[2] += numberList)
+const sum = (num1, num2) => {return num1 + num2}
+return callback(numberList.reduce(sum, 0))
 }
 
 
@@ -167,8 +169,9 @@ function processContains(item, list, callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
+function processDuplicateFree(list, callback) {
   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+  return callback(list.filter())
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
@@ -192,6 +195,7 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 function getFullNames(runners) {
   /* CODE HERE */
   // runners.forEach(function(names){return `${names.last_name} ${names.first_name}`})
+  // runners.forEach( function(names) {`${names.last_name} ${names.first_name}`})
 }
 
 /**
@@ -206,8 +210,9 @@ function getFullNames(runners) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
+function firstNamesAllCaps(runners) {
   /* CODE HERE */
+  return `${runners.first_name}`
 }
 
 /**
@@ -261,7 +266,7 @@ function counterMaker() {
   // BROKEN CODE STARTS
   const count = 0;
   function counter() {
-    ++count
+      ++count
   }
   // BROKEN CODE ENDS
 }
