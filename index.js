@@ -215,7 +215,7 @@ return fullname;
 */
 function firstNamesAllCaps(runners) {
   /* CODE HERE */
-const fullnamecaps = runners.map(runner => (runner.first_name.toUpperCase() , runner.last_name.toUpperCase()))
+const fullnamecaps = runners.map(runner => (runner.first_name.toUpperCase()))
 return fullnamecaps;
 }
 
