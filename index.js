@@ -234,8 +234,8 @@ return fullnamecaps;
 */
 function getRunnersByTShirtSize(runners, tShirtSize) {
   /* CODE HERE */
- const size = runners.shirt_size;
-  return runners.filter(size => {size.shirt_size === tShirtSize});
+ const shirtsize = runners.filter(runner => runner.shirt_size === tShirtSize);
+ return shirtsize;
 
 }
 
