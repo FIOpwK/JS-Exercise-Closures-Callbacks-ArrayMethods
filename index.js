@@ -195,13 +195,6 @@ function processDuplicateFree(list, callback) {
 */
 function getFullNames(runners) {
   /* CODE HERE */
-// const fullname = [];
-// runners.forEach(function(runners){fullname.push(`${runners.first_name} ${runners.last_name}`)}) 
-// return fullname;
-// const fullname = [];
-// runners.forEach(name => {fullname.push(`${runners[name].first_name} ${runners[name].last_name}`)})
-// return fullname;
-// runners.forEach(name => {return name.last_name, name.first_name})
 const fullname = [];
 
 runners.forEach( runner => {fullname.push(`${runner.last_name}, ${runner.first_name}`)})
@@ -222,16 +215,8 @@ return fullname;
 */
 function firstNamesAllCaps(runners) {
   /* CODE HERE */
-//   const toupper = runners.map( name => {
-//      return `${runners.first_name.toUpperCase()}, ${runners.last_name.toUpperCase()}`;
-//     })
-//  return toupper;
-// function upperCase(firstname, lastname) {
-//   return `${runners[firstname].first_name.toUpperCase()}, ${runners[lastname].last_name.toUpperCase()}`
-// }
-
-// return runners.map(upperCase);
-
+const fullnamecaps = runners.map(runner => (runner.first_name.toUpperCase() , runner.last_name.toUpperCase()))
+return fullnamecaps;
 }
 
 /**
@@ -266,8 +251,8 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
 */
 function tallyUpDonations(runners) {
   /* CODE HERE */
-  const sum = function(donation) {return donation += (runners[1].donation) }
-  return runners.reduce(sum, 0)
+  const sum = runners.reduce((acc, runner) => acc + runner.donation, 0);
+  return sum;
 }
 
 /////////////// CLOSURES ///////////////
@@ -288,10 +273,10 @@ function tallyUpDonations(runners) {
 */
 function counterMaker() {
   // BROKEN CODE STARTS
-  const count = 0;
-  function counter() {
-      ++count
-  }
+  // const count = 0;
+  // function counter() {
+  //     ++count
+  
   // BROKEN CODE ENDS
 }
 
@@ -317,9 +302,9 @@ function counterMaker() {
 */
 function counterMakerWithLimit(maxValue) {
   /* CODE HERE */
-  for (let i = 0; i < maxValue; i++) {
-    return maxValue[i]
-  }
+  // for (let i = 0; i < maxValue; i++) {
+  //   return maxValue[i]
+  
 }
 
 /////////////// END OF CHALLENGE ///////////////
